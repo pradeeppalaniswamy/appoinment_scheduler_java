@@ -1,0 +1,572 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 15, 2016, 1:36:42 AM
+    Author     : PRADEEP
+*/
+body
+{
+    margin: 0px;
+    
+}
+.maindiv
+{
+    width: 1000px;
+    background: whitesmoke;
+    
+}
+
+.logoutbtn:hover
+{
+     background: #2ecc71;
+    color: azure;
+}
+
+.logoutbtn
+{
+    webkit-transition:all .2s;
+    background: #9b59b6;
+    height:  30px;
+    width: 70px;
+    text-align: center;
+    position: relative;
+    left: 1200px;
+    bottom: 10px;
+    background: activecaption;
+    text-decoration-line: none;
+    box-shadow: 0px 0px 20px rgba(0,0,0,.5);
+    border-radius:5px; 
+   border: 1px solid #C0DEED; 
+    text-decoration: none !important;
+      
+}
+ .logoutbtn a
+ {
+    text-decoration: none !important;
+ text-decoration-line: none;
+     
+     
+ }
+ 
+.commonpannel
+{
+    
+    top:0px;
+    height:  50px;
+    width: 1500px;
+    background:#9b59b6 ;
+    position: fixed;
+
+}
+
+
+
+.docmain
+{
+    box-shadow: 20px 20px 20px rgba(0,0,0,.5);
+    border-radius:5px; 
+    height: 1500px;
+    width:1000px;
+   position: relative;
+   top:40px;
+   left: 200px;
+   background:  whitesmoke;
+    background:#bdc3c7 ;
+    height: 900px;
+}
+.docpanel
+{
+    top:0px;
+    position: relative;
+    width: 1000px;
+    height: 50px;
+    background:  buttonshadow;
+    border-radius:5px;
+}
+
+
+ul
+{
+           list-style-type: none;
+}
+.docpanel li
+{
+    display: block;
+    
+    
+}
+#personalinfo
+{
+    position: relative;
+    height: 500px;
+background: cornflowerblue;
+    
+}
+
+.docappoinments
+{
+    background: #ecf0f1;
+width:900px;
+    height: 60px;
+   position: relative;
+   left :40px;
+    margin-bottom: 1px;
+    
+    }
+    .docappoinments td 
+    {
+        column-width: 10px;
+        
+    }
+.docappoinments  :hover
+{
+    background: #7f8c8d;
+}
+#Docpersonaldetails input
+{
+background: cornflowerblue;
+color: white;
+font-family: sans-serif;
+    margin: 0px;
+    
+}
+.apptid
+{
+    width: 120px;
+}
+.fname
+{width: 170px;}
+.date
+{width: 100px;}
+.time
+{
+    width: 130px;
+}
+.aprej
+{
+    width: 130px;
+    
+}
+.approvediv
+{
+    width:125px;
+   height: 45px;
+    text-align: center;
+    background: #27ae60;
+    border-radius: 3px;
+    position: relative;
+    
+}
+
+.rejectdiv a
+{
+    text-decoration: none;
+     display: block;
+    width: 125px;
+    height: 45px;
+   
+    
+}
+
+.approvediv a
+{
+    text-decoration: none;
+     display: block;
+    width: 125px;
+    height: 45px;
+   
+    
+}
+
+.rejectdiv
+{
+    position: relative;
+    height: 45px;
+    width:125px;
+   text-align: center;
+    background: #c0392b;
+border-radius: 3px;
+}
+
+#Docpersonaldetails
+{
+    margin: 0px;
+    
+}
+#patientsearchdiv
+{
+    
+    position: relative;
+    height: 500px;
+background: blueviolet;
+
+}
+
+ul.doc li
+{top :7.5px;
+margin: 1px ;
+    width:125px;
+    text-align: center;
+    position: relative;
+    float:left;
+    height: 30px;
+    margin-right: 2px;
+    background: wheat;
+    border-radius: 5px;
+    text-align: center;
+}
+ul.doc li:hover{
+    
+    background-color: #FF0;
+}
+
+#viewreportdiv
+{
+    height: 700px;
+    overflow: auto;
+    overflow-x: hidden;
+    
+    
+}
+.patmain
+{
+    background:FCD5D8;
+    height: 1000px;
+}
+
+.pat
+{
+    display: block;
+
+}
+.patmain
+{
+    
+    box-shadow: 20px 20px 20px rgba(0,0,0,.5);
+    border-radius:5px; 
+    height: 1500px;
+    width:1000px;
+   position: relative;
+   top:40px;
+   left: 200px;
+   background:  whitesmoke;
+    background:#bdc3c7 ;
+    height: 900px;
+}
+
+#patviewreportdiv
+{
+    height: 700px;
+    overflow: auto;
+    overflow-x: hidden;
+    
+}
+.patpanel
+{
+    top:0px;
+    position: relative;
+    width: 1000px;
+    height: 50px;
+    background:  buttonshadow;
+    border-radius:5px;
+}
+.patpanel li
+{
+    display: block;
+    
+    
+}
+ul.pat li
+{top :7.5px;
+margin: 1px ;
+    width:125px;
+    text-align: center;
+    position: relative;
+    float:left;
+    height: 30px;
+    margin-right: 2px;
+    background: wheat;
+    border-radius: 5px;
+    text-align: center;
+}
+ul.pat li:hover{
+    
+    background-color: #FF0;
+}
+
+.appointnmnttable td
+{
+    width:40px;
+    
+}
+.timeslotpulldown
+{
+    width: 40px;
+    
+}
+.patientappointmentnew table
+{
+    background: #117883;
+}
+.patientappointmentnew  table td
+{
+    width: 250px;
+    height: 48px
+}
+.patientappointmentnew  table tr
+{
+    width: 500px;
+    border-radius: 5px;
+}
+
+
+.patientappointmentnew  :hover
+{
+    background: ghostwhite;
+}
+.patientappointmentnew
+{
+    position:relative;
+   width: 250px;
+   height: 50px;
+  margin: 1px;
+  left :30px;
+    
+}
+
+.patientappointmentrej table
+{
+    background: #EF6D3C;
+}
+.patientappointmentrej  table td
+{
+    width: 500px;
+    height: 48px
+}
+.patientappointmentrej  table tr
+{
+    border-radius: 5px;
+}
+
+
+.patientappointmentrej  :hover
+{
+    background: ghostwhite;
+}
+.patientappointmentrej
+{
+    position:relative;
+   width: 900px;
+   height: 50px;
+  margin: 1px;
+  left :30px;
+    
+}
+
+
+.patientappointmentapr  table tr
+{
+    border-radius: 5px;
+}
+
+.patientappointmentapr table
+{
+    
+    background: #7DFF33;
+    
+}
+
+
+.patientappointmentapr  table td
+{
+    width: 500px;
+    height: 48px
+}
+.patientappointmentapr  table tr
+{
+    border-radius: 5px;
+}
+
+
+.patientappointmentapr  :hover
+{
+    background: ghostwhite;
+}
+
+.patientappointmentapr
+{
+    position: relative;
+   width: 900px;
+   height: 50px;
+   margin: 1px;
+   left :30px; 
+}
+
+
+.patientappointmenthdr
+{
+    top:30px;
+    position: relative;
+   width: 600px;
+   height: 50px;
+   margin: 1px;
+   left :30px; 
+background: ghostwhite;
+    
+}
+.patientappointmenthdr  table tr
+{
+    border-radius: 5px;
+}
+
+.patientappointmenthdr table
+{
+    
+  position:relative;
+  
+    background: ghostwhite;
+  
+    
+}
+
+
+.patientappointmenthdr  table td
+{
+    width: 450px;
+    height: 48px
+}
+.patientappointmenthdr  table tr
+{
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+#testbtn
+{position: relative;
+    background: #DAF7A6;
+    width: 900px;
+    height:40px;
+ left: 30px;
+    text-align: center;
+    border-radius: 5px;
+    
+}
+#testbtn :hover
+{
+    background: #F5F47F
+    
+}
+ 
+ #confirmedappts
+ {
+     
+     width:1000px;
+     height: 600px;
+     overflow-y:auto;
+     
+ }
+ .appointnmnttable{
+ margin-bottom: 5px;
+ }
+ .appointnmnttable td
+ {
+     position: relative;
+     left: 15px;
+     width: 150px;
+     height: 40px;
+     background: #95CCE6;
+     
+ }
+ .appointnmnttable td select,input
+ {
+      left: 30px;
+     width: 250px;
+     height: 40px;
+     
+ }
+ #appointmntstatus
+ {
+     height: 40px;
+     width: 900px;
+     background: #F0F5B8;
+     position: relative;
+     left:30px;
+     margin-bottom: 10px;
+     
+     
+ }
+ .editdiv
+ {
+     height:40px;
+     width: 220px;
+     background: beige;
+ }
+ #total
+ {
+  width: 500px;
+  height: 500px;
+  overflow-y: auto;
+  overflow-x: auto;
+     
+ }
+ 
+ .st
+ {
+     background: white;
+ }
+ .bk
+ {
+     background: wheat;
+     
+ }
+ 
+ 
+ .table tbody tr > td.success {
+  background-color: #dff0d8 !important;
+}
+
+.table tbody tr > td.error {
+  background-color: #f2dede !important;
+}
+
+.table tbody tr > td.warning {
+  background-color: #fcf8e3 !important;
+}
+
+.table tbody tr > td.info {
+  background-color: #d9edf7 !important;
+}
+
+.table-hover tbody tr:hover > td.success {
+  background-color: #d0e9c6 !important;
+}
+
+.table-hover tbody tr:hover > td.error {
+  background-color: #ebcccc !important;
+}
+
+.table-hover tbody tr:hover > td.warning {
+  background-color: #faf2cc !important;
+}
+
+.table-hover tbody tr:hover > td.info {
+  background-color: #c4e3f3 !important;
+}
+.whitebck
+{
+    
+    background: white !important;
+}
+
+.margintop20
+{
+    margin-top: 20px;
+}
