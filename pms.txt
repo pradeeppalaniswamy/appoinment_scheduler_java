@@ -1,0 +1,103 @@
+CREATE TABLE `access_level` (
+  `type_id` int(11) DEFAULT NULL,
+  `access_level` int(11) NOT NULL,
+  PRIMARY KEY (`access_level`),
+  KEY `type_id` (`type_id`),
+  CONSTRAINT `access_level_ibfk_1` FOREIGN KEY (`type_id`) REFERENCES `employee_type` (`type_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ;
+
+
+CREATE TABLE `appointments` (
+  `appointmentid` int(11) NOT NULL AUTO_INCREMENT,
+  `day` date DEFAULT NULL,
+  `confirmation` varchar(10) DEFAULT NULL,
+  `doctorid` varchar(10) DEFAULT NULL,
+  `patientid` varchar(20) DEFAULT NULL,
+  `timeslotid` int(11) DEFAULT NULL,
+  PRIMARY KEY (`appointmentid`),
+  KEY `fk_pat` (`patientid`),
+  KEY `fk_doc` (`doctorid`),
+  KEY `fk_ts` (`timeslotid`),
+  CONSTRAINT `fk_doc` FOREIGN KEY (`doctorid`) REFERENCES `employeee` (`employee_id`),
+  CONSTRAINT `fk_pat` FOREIGN KEY (`patientid`) REFERENCES `patient` (`patientid`),
+  CONSTRAINT `fk_ts` FOREIGN KEY (`timeslotid`) REFERENCES `timeslot` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE `department` (
+  `department_id` int(11) NOT NULL,
+  `department_name` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`department_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE `employee_type` (
+  `type_id` int(11) NOT NULL,
+  `employee_type` varchar(30) DEFAULT NULL,
+  `access_level` int(11) DEFAULT NULL,
+  PRIMARY KEY (`type_id`);
+
+CREATE TABLE `employee_type` (
+  `type_id` int(11) NOT NULL,
+  `employee_type` varchar(30) DEFAULT NULL,
+  `access_level` int(11) DEFAULT NULL,
+  PRIMARY KEY (`type_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `employeee` (
+  `employee_id` varchar(20) NOT NULL,
+  `typeid` int(11) DEFAULT NULL,
+  `Fname` varchar(20) DEFAULT NULL,
+  `Lname` varchar(20) DEFAULT NULL,
+  `department_id` int(11) DEFAULT NULL,
+  `gender` varchar(10) DEFAULT NULL,
+  `phonenumber` varchar(20) DEFAULT NULL,
+  `email` varchar(20) DEFAULT NULL,
+  `bloodgroup` varchar(5) DEFAULT NULL,
+  `username` varchar(20) DEFAULT NULL,
+  `password` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`employee_id`),
+  KEY `department_id` (`department_id`),
+  KEY `typeid` (`typeid`),
+  CONSTRAINT `employeee_ibfk_1` FOREIGN KEY (`department_id`) REFERENCES `department` (`department_id`),
+  CONSTRAINT `employeee_ibfk_2` FOREIGN KEY (`typeid`) REFERENCES `employee_type` (`type_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+ CREATE TABLE `patient` (
+  `patientid` varchar(20) NOT NULL,
+  `patientname` varchar(20) DEFAULT NULL,
+  `fname` varchar(20) DEFAULT NULL,
+  `lname` varchar(20) DEFAULT NULL,
+  `gender` varchar(5) DEFAULT NULL,
+  `dob` date DEFAULT NULL,
+  `phoneno` varchar(20) DEFAULT NULL,
+  `email` varchar(20) DEFAULT NULL,
+  `reason_of_visit` text,
+  `bloodbgoup` varchar(5) DEFAULT NULL,
+  `username` varchar(20) DEFAULT NULL,
+  `password` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`patientid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `scanimages` (
+  `image_id` int(11) NOT NULL AUTO_INCREMENT,
+  `photo` mediumblob,
+  `patientid` varchar(20) DEFAULT NULL,
+  `imgdescription` text,
+  `dateofimage` date DEFAULT NULL,
+  PRIMARY KEY (`image_id`),
+  KEY `patientid` (`patientid`),
+  CONSTRAINT `scanimages_ibfk_1` FOREIGN KEY (`patientid`) REFERENCES `patient` (`patientid`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+
+CREATE TABLE `timeslots` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `value` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+CREATE TABLE `timeslot` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `value` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
